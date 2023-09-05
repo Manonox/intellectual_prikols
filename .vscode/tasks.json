@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Rust: run (Debug)",
+			"command": "cargo run",
+			"problemMatcher": [],
+			"detail": "Poebat",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+
+		{
+			"type": "shell",
+			"label": "Rust: run (Release)",
+			"command": "cargo run --release",
+			"problemMatcher": [],
+			"detail": "Poebat (Release)",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+} 
