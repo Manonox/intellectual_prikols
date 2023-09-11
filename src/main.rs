@@ -13,22 +13,21 @@ fn main() -> io::Result<()> {
         return Ok(());
     }
 
-    let start = read::<i32>("start = ")?;
-    let target = read::<i32>("target = ")?;
+    let start = read("start = ")?;
+    let target = read("target = ")?;
     println!("------------");
 
     let functions = &vec![
-        |x: i32| -> i32 { x + 3 },
-        |x: i32| -> i32 { x * 2 },
-        |x: i32| -> i32 { x - 2 },
+        |x| { x + 3 },
+        |x| { x * 2 },
+        |x| { x - 2 },
     ];
 
     let inverse_functions = &vec![
-        |x: i32| -> i32 { x - 3 },
-        |x: i32| -> i32 { x / 2 },
-        |x: i32| -> i32 { x + 2 },
+        |x| { x - 3 },
+        |x| { x / 2 },
+        |x| { x + 2 },
     ];
-
     
     {
         let now = Instant::now();

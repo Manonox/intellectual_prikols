@@ -17,6 +17,7 @@ pub fn normal(start: i32, target: i32, functions: &Vec<fn(i32) -> i32>) -> Vec<i
         closed.insert(node_id);
         let mut node_mut = tree.get_mut(node_id).unwrap();
         let value: i32 = *node_mut.data();
+
         for function in functions {
             let next = function(value);
             let new_node_mut = node_mut.append(next);
